@@ -1,7 +1,6 @@
 // import React, { Component } from 'react';
-// import logo from './logo.svg';
 import './App.css';
-import { VideoCameraOutlined,AudioMutedOutlined,SendOutlined } from '@ant-design/icons';
+import { VideoCameraOutlined,AudioMutedOutlined,SendOutlined,WechatOutlined } from '@ant-design/icons';
 import React, { useState, useEffect } from 'react';
 
 function App() {
@@ -24,11 +23,6 @@ function App() {
   
   return (
     <div className="App">
-    {/* <header className="App-header"> */}
-      {/* <img src={logo} className="App-logo" alt="logo" /> */}
-      {/* <h1 className="App-title">Welcome to React</h1> */}
-    {/* </header> */}
-    {/* <body> */}
 
   <div className="main">
     <div className="mainLeft">
@@ -63,24 +57,25 @@ function App() {
     </div>
     <div className="mainRight">
       <div className="mainHeader">
-        <h6>Chat Box</h6>
+        <span><WechatOutlined /></span>
+        <h3>Chat Box</h3>
       </div>
       <div className="mainChatWindow">
         <ul className="messagesContainer">
         </ul>
      </div>
-     {/* <div className="messageSendingTo">To: <span>Everyone <i className="fas fa-angle-down"></i></span> </div> */}
      
      <div className="mainMessageContainer">
         <input id="chatMessage" type="text" placeholder="Type message here..."/>
         <span className="buttonSendMessage">
-          <SendOutlined />
+        <SendOutlined >
+        <button id="sendMessage"></button>
+        </SendOutlined>
         </span>
      </div>
     
     </div>
 </div>
-{/* </body> */}
   </div>
   );
 }
